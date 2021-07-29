@@ -1,0 +1,11 @@
+
+<div id='note' style="position:relative">
+<h3 style="position:sticky">Notifications</h3>
+<div class = "card" *ngFor = "let note of notes; index as i ">
+<p id="p1" >{{i+1}}.</p>
+<p id="p2">{{note.nTitle}}  </p>
+<p id="p3">{{note.date |date}}</p>
+<div>{{note.discrip}}</div>
+</div>
+
+</div>

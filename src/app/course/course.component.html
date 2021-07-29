@@ -1,0 +1,31 @@
+<h1>COURSES</h1>
+
+<div class="m-2 bg-dark text-light" *ngFor = "let course of courses">
+  <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <img [src]=course.path alt="" style="height: 200px; width: 350px;">
+        </div>
+          <div class="col-8" >
+            <div class="row">
+              <div class="col-6">
+                <h3>{{ course.ctitle | uppercase}}</h3>
+              </div>
+              <div class="col-6">
+                <p class="text-end">{{course.duration}} Weeks</p>
+              </div>
+              <div class="row">
+                <p>{{course.descrip}}</p>
+              </div>
+              <div class="row ">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                <button class="btn btn-primary me-3" >Enroll</button>
+                <p style='margin-top:1rem'>Price:{{course.price}}$</p>
+
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>

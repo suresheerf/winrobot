@@ -1,0 +1,22 @@
+#note{
+  width:50vw;
+  height: 30vh;
+  overflow: auto;
+}
+
+.card{
+  border: solid rgb(46, 173, 103) 1px;
+  display: flex;
+  flex-direction: row ;
+  flex-wrap: wrap;
+
+}
+#p1,#p2{
+
+
+}
+#p3{
+  flex-basis: 340px;
+  flex-grow: 1;
+  text-align: end;
+}

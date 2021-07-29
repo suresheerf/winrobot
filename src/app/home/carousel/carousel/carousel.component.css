@@ -1,0 +1,11 @@
+.carousel{
+  text-align: center;
+}
+.carousel img{
+
+  height: 60vh;
+  width: 80vw;
+}
+article{
+  margin:5%
+}
