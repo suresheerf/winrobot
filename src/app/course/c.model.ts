@@ -1,3 +1,3 @@
 export class C{
-  constructor(public ctitle:string, public duration:number, public descrip:string ,public path:string, public price:number ){}
+  constructor(public name:string, public duration:number, public description:string ,public imageCover:string, public price:number ){}
 }

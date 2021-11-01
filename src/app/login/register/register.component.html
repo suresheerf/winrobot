@@ -1,15 +1,19 @@
-<p>register works!</p>
-<h1>Register</h1>
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+        <h1>Register</h1>
+        <form (ngSubmit)="onSubmit(register)" #register="ngForm">
 
-<form (ngSubmit)="onSubmit()">
-  <label for="name">name:</label>
-  <input type="text">
-
-  <label for="email">email</label>
-  <input type="text" name="email" id="email">
-
-  <label for="password">Password</label>
-  <input type="password">
-  <button type="submit" class="btn btn-primary me-3">Register</button>
-  <button class=" btn btn-primary "><a style="text-decoration: none;" routerLink='/login'>login</a></button>
-</form>
+          <input class="form-cntrol" type="text" placeholder="name" ngModel name="name" required >
+          <br>
+          <input class="form-cntrol my-2" type="text" ngModel name="email" placeholder="email" required email>
+          <br>
+          <input class="form-cntrol mb-2" type="password" placeholder="password" ngModel name="password" required>
+          <br>
+          <p *ngIf="!formValid">please enter valid data.</p>
+          <button type="submit" class="btn btn-primary me-3">Register</button>
+          <button class=" btn btn-primary "><a class="text-light" routerLink='/login'>login</a></button>
+        </form>
+    </div>
+  </div>
+</div>

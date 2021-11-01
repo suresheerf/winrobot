@@ -1,17 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+        <h1>{{ formName |uppercase }}</h1>
 
-<h1>{{ formName |uppercase }}</h1>
+        <form (ngSubmit)="onSubmit(login)" #login="ngForm">
 
-<form action="" (ngSubmit)="onSubmit()">
-  <label for="emailId">email Id:</label>
-  <input type="email" name="email" id="email" formControlName="email">
+          <input  type="email" name="email" placeholder="email" ngModel required email>
+          <br>
+          <input class="my-2" type="password" name="password" placeholder="password" ngModel required>
+          <br>
+          <p *ngIf="!formValid">enter valid data</p>
 
-  <label for="password">Password</label>
-  <input type="password" formControlName="password">
+          <button type="submit" class="btn btn-primary me-3">LOGIN</button>
 
-  <button type="submit" class="btn btn-primary me-3">LOGIN</button>
+          <button class="btn btn-primary "><a class="text-light" routerLink='/register'>Register</a></button>
+        </form>
 
-  <button class="btn btn-primary "><a style="text-decoration: none;" routerLink='/register'>Register</a></button>
-</form>
+    </div>
+   </div>
+</div>
 
 
 
